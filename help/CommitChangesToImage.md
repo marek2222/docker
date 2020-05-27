@@ -2,23 +2,7 @@
 # https://thenewstack.io/container-basics-how-to-commit-changes-to-a-docker-image/
 
 
-Endpointy:
-```
-GET /pobierz
-```
-!!! Endpoint dla frontendu !!!
-Endpoint służący do pobierania wszystkich urli.
-
-
-
-
-
-    https://thenewstack.io/container-basics-how-to-commit-changes-to-a-docker-image/
-
-
-
-```
-Pulling the Official Image
+# Pulling the Official Image
 ```
     docker pull nginx
 
@@ -26,6 +10,7 @@ Pulling the Official Image
 # Deploying the Container
 What we have to do is deploy our new container in such a way that we have access to the associated bash prompt (so we can work within the container). To do that, we deploy with the command:
 
+```
     docker run --name nginx-template -p 8080:80 -e TERM=xterm -d nginx
 
 The above command break down look like this:
