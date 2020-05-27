@@ -5,6 +5,7 @@
 # Pulling the Official Image
 ```
     docker pull nginx
+```
 
 
 # Deploying the Container
@@ -12,6 +13,7 @@ What we have to do is deploy our new container in such a way that we have access
 
 ```
     docker run --name nginx-template -p 8080:80 -e TERM=xterm -d nginx
+```
 
 The above command break down look like this:
 
