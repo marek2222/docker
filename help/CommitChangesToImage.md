@@ -1,5 +1,5 @@
 ## Container Basics: How to Commit Changes to a Docker Image
-#    https://thenewstack.io/container-basics-how-to-commit-changes-to-a-docker-image/
+# https://thenewstack.io/container-basics-how-to-commit-changes-to-a-docker-image/
 
 
 Endpointy:
@@ -17,11 +17,13 @@ Endpoint służący do pobierania wszystkich urli.
 
 
 
+```
 Pulling the Official Image
+```
     docker pull nginx
 
 
-Deploying the Container
+# Deploying the Container
 What we have to do is deploy our new container in such a way that we have access to the associated bash prompt (so we can work within the container). To do that, we deploy with the command:
 
     docker run --name nginx-template -p 8080:80 -e TERM=xterm -d nginx
@@ -36,5 +38,5 @@ docker run instructs Docker that we are running a new container.
 nginx is the name of the image to be used for the container.
 
 
-Accessing and Modifying the Container
+# Accessing and Modifying the Container
 
