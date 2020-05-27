@@ -14,10 +14,8 @@ $ docker --version
 ## Test Docker installation
 
 
-1. Test that your installation works by running the hello-world 
+1. Test that your installation works by running the hello-world Docker image:
 ```
-Docker image:
-
     $ docker run hello-world
 
     Unable to find image 'hello-world:latest' locally
