@@ -8,11 +8,11 @@ After you’ve successfully installed Docker Desktop, open a terminal and run do
 
 ```
 $ docker --version
+Docker version 19.03.8, build afacb8b
 ```
 
 
 ## Test Docker installation
-
 
 1. Test that your installation works by running the hello-world Docker image:
 ```
@@ -29,7 +29,11 @@ $ docker --version
     ...
 ```
 
-2. Run docker image ls to list the hello-world image that you downloaded to your machine.
+2. Run 
+```
+docker image ls
+```
+to list the hello-world image that you downloaded to your machine.
 
 3. List the hello-world container (spawned by the image) which exits after displaying its message. If it is still running, you do not need the --all option:
 
@@ -39,3 +43,8 @@ $ docker --version
     CONTAINER ID     IMAGE           COMMAND      CREATED            STATUS
     54f4984ed6a8     hello-world     "/hello"     20 seconds ago     Exited (0) 
 ```
+
+
+## Build and run your image
+
+
