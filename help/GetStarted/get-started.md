@@ -14,8 +14,9 @@ $ docker --version
 ## Test Docker installation
 
 
+1. Test that your installation works by running the hello-world 
 ```
-Test that your installation works by running the hello-world Docker image:
+Docker image:
 
     $ docker run hello-world
 
@@ -30,11 +31,13 @@ Test that your installation works by running the hello-world Docker image:
     ...
 ```
 
-Run docker image ls to list the hello-world image that you downloaded to your machine.
+2. Run docker image ls to list the hello-world image that you downloaded to your machine.
 
-List the hello-world container (spawned by the image) which exits after displaying its message. If it is still running, you do not need the --all option:
+3. List the hello-world container (spawned by the image) which exits after displaying its message. If it is still running, you do not need the --all option:
 
+```
     $ docker ps --all
 
     CONTAINER ID     IMAGE           COMMAND      CREATED            STATUS
     54f4984ed6a8     hello-world     "/hello"     20 seconds ago     Exited (0) 
+```
