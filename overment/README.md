@@ -1,4 +1,4 @@
-## Prosta aplikacja do zwracania vversji node.js
+## Prosta aplikacja do zwracania wersji node.js
 ```
     mkdir overment
     cd overment
@@ -6,4 +6,9 @@
     npm install --save express
 ```
 
+Uruchom:
+```
+node app.js
+```
+aby pokazać wersję dockera. 
 
