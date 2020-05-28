@@ -46,7 +46,19 @@ Dockerfile
     CMD [ "node", "app.js" ]
 ```
 
+Jeśli serwer działa, zakończ jego działanie (ctrl+C).
+Buduj obraz w bieżącym katalogu:
+```
+    docker build -t  overment/demo .
+``` 
+-t taguje obraz jako: overment/demo
+Kropka wskazuje na bieżący katalog.
 
+
+Uruchamiam aplikację overment/demo na porcie 8000 przechwytując port 8080: 
+```
+    docker run -p 8000:8080 overment/demo
+```
 
 
 
