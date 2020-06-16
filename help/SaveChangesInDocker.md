@@ -13,4 +13,5 @@ docker run -e ARANGO_ROOT_PASSWORD=OpenSezame -p 8529:8529 -d  --name myArango -
 
 docker container stop myArango && docker container rm myArango
 
+
         
