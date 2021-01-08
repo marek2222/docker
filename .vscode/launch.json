@@ -24,6 +24,16 @@
             "request": "launch",
             "mode": "debug",
             "program": "${workspaceFolder}/brokers/rabbit-02/consumer"
+        }, 
+        {
+            "name": "rabbit-03",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/brokers/rabbit-03",
+            "env": {
+                
+            }
         }
     ]
 }
