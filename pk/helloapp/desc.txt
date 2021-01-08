@@ -1,0 +1,80 @@
+01-07: Repozytoria i najlepsze praktyki
+
+Utwórz plik main.go
+
+Sprawdź czy działa
+
+uruchom lokalnie na 8080
+
+Dodaj plik Dockerfile 
+    - z obrazem golang:latest. Dużo waży.  
+    - z katalogiem roboczym /helloapp
+    ADD . . - kopiuje wszystkie pliki z katalogu roboczego do
+ katalogu helloapp na kontenerze
+    - budujemy naszą aplikację i nazywamy ją main
+    - wystawiamy na porcie 8080
+    - uruchamiany aplikację "/helloapp/main"
+
+
+Żeby ją uruchomić budowanie obrazu - na razie lokalnie: 
+ docker build -t helloapp . 
+
+Sprawdź jakie masz obrazy:
+  docker images
+
+Mamy wtedy 2 obrazy: 
+ - golang:latest z obrazem golanga
+ - helloapp - z naszą apką 
+
+
+Uruchamiam kontener z apką: 
+ docker run --rm -it -p 80:8080 helloapp
+ - --rm usuwa kontener
+ - -it pozwala reagowaćna ctrl+C
+ - -p forwarduje porty z 8080 na 80
+ - nadaje nazwę helloapp
+
+lub z opcją detach: 
+ docker run -d -p 80:8080 helloapp
+
+
+Aby zobaczyć działjące kontenery: 
+ docker ps
+Można je zobaczyć na localhost:80
+
+Aby zatrzymać konretny kontener: 
+ docker stop nazwa_kontenera
+
+Usuń kontener żeby nie zajmował miejsca: 
+ docker rm vigorous_mayer
+
+
+
+Można teraz wrzucić apkę do docker.hub
+Logujesz się przez: 
+ docker login 
+
+Dalej otaguj nazwę image jako:
+ docker tag helloapp:latest marek2222/helloapp:1.0
+
+Teraz można spushować ten obraz na hub.docker.com
+ docker push marek2222/helloapp:1.0 
+
+Moźna zastopować stary obraz:
+ docker stop marek2222/helloapp:1.0 
+
+
+
+Moźna usunąć stary obraz:
+ docker rmi marek2222/helloapp:1.0 
+
+Moźna usunąć stary obraz:
+ docker rmi competent_torvalds
+
+ Można też ściągnąc obraz:
+  docker pull marek2222/helloapp:1.0
+
+I go uruchomić na hub.docker.com
+ docker run -it --rm -p 80:8080 marek2222/helloapp:1.0
+
+ 
