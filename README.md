@@ -7,7 +7,7 @@ docker volume inspect vArango
 docker volume rm vArango
 
 ## Obraz arangodb:latest
-docker pull arangodb:latest
+docker pull arangodb:3.7.3
 
 
 ---------------------------------------------
@@ -17,7 +17,7 @@ docker volume create vArango
   -- ROOT_PASSWORD - for production
 docker run --name=myArango -e ARANGO_ROOT_PASSWORD=OpenSezame -p 8529:8529 -d -v vArango:/var/lib/arangodb3 arangodb:latest
   -- no auth - only for testing
-docker run --name=myArango -e ARANGO_NO_AUTH=1 -p 8529:8529 -d -v vArango:/var/lib/arangodb3 arangodb:latest
+docker run --name=myArango -e ARANGO_NO_AUTH=1 -p 8529:8529 -d -v vArango:/var/lib/arangodb3 arangodb:3.7.3
 
 ## Wyczyść kontenery i woluminy
 docker container stop myArango && docker container rm myArango 
