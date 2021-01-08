@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	conn, err := rabbit.GetConn("amqp://guest:guest@localhost:15672")
+	conn, err := rabbit.GetConn("amqp://guest:guest@localhost:5672")
 	if err != nil {
 		panic(err)
 	}

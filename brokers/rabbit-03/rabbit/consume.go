@@ -21,7 +21,7 @@ func (conn Conn) StartConsumer(
 	}
 
 	// bind the queue to the routing key
-	err = conn.Channel.QueueBind(queueName, routingKey, "events", false, nil)
+	err = conn.Channel.QueueBind(queueName, routingKey, "test.events", false, nil)
 	if err != nil {
 		return err
 	}
