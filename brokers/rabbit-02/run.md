@@ -11,3 +11,8 @@ docker run -d --hostname my-rabbit --name some-rabbit -p 15672:15672 -p 5672:567
 In your browser, navigate to localhost:15672, you should see the RabbitMQ UI; login with guest as the username and password.
 
 
+## Consuming Messages From a Queue
+Start by creating a new file called in which we’ll add the following: 'consumer.go'.
+
+
+
