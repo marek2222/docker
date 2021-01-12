@@ -6,7 +6,7 @@ import (
 
 	"github.com/streadway/amqp"
 )
-
+ 
 // StartConsumer -
 func (conn Conn) StartConsumer(
 	queueName,
