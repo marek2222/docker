@@ -2,6 +2,16 @@ How To Deploy And Run Redis In Docker
     by Vladimir Kaplarevic
 Based on https://phoenixnap.com/kb/docker-redis
 
+Start a Docker Redis Container
+1. Check the current status of the Docker service by entering the following command in your terminal:
+
+    sudo systemctl status docker
+
+2. Retrieve and start a Redis container (my-first-redis) with the docker run command:
+
+    sudo docker run --name my-first-redis -d redis
+
+
 
 Connect to Redis with redis-cli
     sudo docker exec -it myRedis sh
