@@ -4,7 +4,6 @@ Based on: https://github.com/docker-library/redis/issues/176
 
 
 Sharing this for other users:
-
 sudo docker volume create vRedis
 
 sudo docker run --name redis -d -p 6379:6379 -v vRedis:/data  redis:6.2-alpine redis-server --requirepass "redis_password"
@@ -43,7 +42,9 @@ In addition, you can add some additional flags to the docker run command:
 
 For example: -e AWS_ACCESS_KEY=<aws access key> -e AWS_SECRET_KEY=<aws secret access key>
 If everything worked, you should see a message “Running RDBtools on localhost:8001” in the terminal.
-=======
+
+  
+ 
 Volume
 
     docker volume create vRedis
