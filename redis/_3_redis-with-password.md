@@ -43,3 +43,27 @@ In addition, you can add some additional flags to the docker run command:
 
 For example: -e AWS_ACCESS_KEY=<aws access key> -e AWS_SECRET_KEY=<aws secret access key>
 If everything worked, you should see a message “Running RDBtools on localhost:8001” in the terminal.
+=======
+Volume
+
+    docker volume create vRedis
+
+Running
+
+    docker run -d \
+    -h redis \
+    -e REDIS_PASSWORD=redis \
+    -v vRedis:/data \
+    -p 6379:6379 \
+    --name redis \
+    --restart always \
+    redis:6.2-alpine /bin/sh -c 'redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}'
+
+Remove
+
+docker rm -f redis
+docker volume rm vRedis
+
+
+Or 
+    docker run --name redis -d -p 6379:6379 redis redis-server --requirepass "SUPER_SECRET_PASSWORD"
